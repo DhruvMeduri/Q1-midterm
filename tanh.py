@@ -100,6 +100,26 @@ plt.ylabel("%error")
 plt.title("Error Trajectory")
 plt.show()
 
+# This is for plotting the decision boundaries
+xc1 = [0,1,2]
+yc1 = [0,2,1]
+xc2 = [0,1,2]
+yc2 = [1,0,2]
+xc3 = [0,1,2]
+yc3 = [2,1,0]
+plt.scatter(xc1,yc1,color = 'blue')
+plt.scatter(xc2,yc2,color = 'red')
+plt.scatter(xc3,yc3,color = 'green')
+x = np.linspace(-1,4,100)
+y = (-a[1][0]/a[2][0])*x + (-a[0][0]/a[2][0])
+plt.plot(x,y,color='blue')
+y = (-a[1][1]/a[2][1])*x + (-a[0][1]/a[2][1])
+plt.plot(x,y,color = 'green')
+y = (-a[1][2]/a[2][2])*x + (-a[0][2]/a[2][2])
+plt.plot(x,y,color = 'red')
+y = (-a[1][3]/a[2][3])*x + (-a[0][3]/a[2][3])
+plt.plot(x,y, color = 'black')
+plt.show()
 '''
 #Now we plot for comparison on varying the momentum constant and learning rate
 err1 = []
